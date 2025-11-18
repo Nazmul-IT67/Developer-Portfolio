@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Developer Portfolio</title>
+   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/faveicon/favicon-32x32.png" />
+   <link rel="stylesheet" href="assets/css/daisyui@5.css" />
+   <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+   <header>
+      <div id="header">
+         <div class="container">
+            <nav>
+               <img src="assets/images/logo.png" alt="" class="logo" />
+               <ul id="sidemenu">
+                  <li><a href="#header">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#service">Services</a></li>
+                  <li><a href="#portfolio">Portfolio</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                  <i class="fas fa-times" onclick="closemenu()"></i>
+               </ul>
+               <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-title">
+               <p>Full-Stack Developer</p>
+               <h1>HI, I'm<br /><span>Nazmul Islam</span><br />From Bangladesh</h1>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <main>
+      <!----------about----------->
+      <div id="about">
+         <div class="container">
+            <div class="row">
+               <div class="about-col-1">
+                  <img src="assets/images/user.png" alt="" />
+               </div>
+               <div class="about-col-2">
+                  <h1>About Me</h1>
+                  <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
+                     aperiam sed, quisquam at error mollitia doloremque non placeat,
+                     porro alias optio voluptas veritatis qui doloribus in cum
+                     explicabo quis hic! Lorem ipsum dolor sit amet, consectetur
+                     adipisicing elit. Itaque aperiam sed, quisquam at error mollitia
+                     doloremque non placeat, porro alias optio voluptas veritatis qui
+                     doloribus in cum explicabo quis hic! Lorem ipsum dolor sit amet,
+                     consectetur adipisicing elit. Itaque aperiam sed, quisquam at
+                     error mollitia doloremque non placeat, porro alias optio
+                     voluptas veritatis qui doloribus in cum explicabo quis hic!
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
+                     aperiam sed, quisquam at error mollitia doloremque non placeat,
+                     porro alias optio voluptas veritatis qui doloribus in cum
+                     explicabo quis hic!
+                  </p>
+
+                  <div class="tab-titles">
+                     <p class="tab-links active-link" onclick="opentab('skills')">
+                        Skills
+                     </p>
+                     <p class="tab-links" onclick="opentab('experince')">
+                        Experince
+                     </p>
+                     <p class="tab-links" onclick="opentab('eaducation')">
+                        Eaducation
+                     </p>
+                  </div>
+
+                  <div class="tab-contents active-tab" id="skills">
+                     <ul>
+                        <li><span>Web Design</span><br />Wep App Design</li>
+                        <li><span>Web Development</span><br />Wep App Development</li>
+                        <li><span>SEO</span><br />SEO Friendly</li>
+                     </ul>
+                  </div>
+                  <div class="tab-contents" id="experince">
+                     <ul>
+                        <li>
+                           <span>2019-2020</span><br />Wep Design Creative IT Institute
+                        </li>
+                        <li>
+                           <span>2019-2020</span><br />WordPress Creative IT Institute
+                        </li>
+                        <li>
+                           <span>2020-2021</span><br />Wep Development Creative IT
+                           Institute
+                        </li>
+                        <li>
+                           <span>2021-2022</span><br />SEO Friendly Creative IT
+                           Institute
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="tab-contents" id="eaducation">
+                     <ul>
+                        <li><span>2017</span><br />Secondary School Certificate</li>
+                        <li><span>2022</span><br />Diploma in Engineering</li>
+                        <li><span>2023</span><br />Complate Web Development</li>
+                        <li><span>2027</span><br />Bacolor of Softwer Engineering</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!--------Services-------->
+      <div id="service">
+         <div class="container">
+            <h1 class="service-title">My Services</h1>
+            <div class="service-item">
+               <div>
+                  <i class="fa-solid fa-code"></i>
+                  <h2>Web Design</h2>
+                  <p>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Consequatur harum quia, doloribus cupiditate nihil aspernatur
+                     impedit officia ipsam molestiae ducimus eligendi totam dolor
+                     amet, alias tempore quo temporibus est veniam!
+                  </p>
+                  <a href="#">Read More</a>
+               </div>
+               <div>
+                  <i class="fa-solid fa-laptop-code"></i>
+                  <h2>Web Design</h2>
+                  <p>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Consequatur harum quia, doloribus cupiditate nihil aspernatur
+                     impedit officia ipsam molestiae ducimus eligendi totam dolor
+                     amet, alias tempore quo temporibus est veniam!
+                  </p>
+                  <a href="#">Read More</a>
+               </div>
+               <div>
+                  <i class="fa-brands fa-wordpress"></i>
+                  <h2>Web Design</h2>
+                  <p>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Consequatur harum quia, doloribus cupiditate nihil aspernatur
+                     impedit officia ipsam molestiae ducimus eligendi totam dolor
+                     amet, alias tempore quo temporibus est veniam!
+                  </p>
+                  <a href="#">Read More</a>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-----------Portfolio---------->
+      <div id="portfolio">
+         <div class="container">
+            <h1 class="service-title">My Works</h1>
+            <div class="portfolio-item">
+               <div class="single-portfolio">
+                  <img src="assets/images/work-1.png" alt="" />
+                  <div class="portfolio">
+                     <h3>Web App</h3>
+                     <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Deleniti ducimus saepe?
+                     </p>
+                     <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                  </div>
+               </div>
+               <div class="single-portfolio">
+                  <img src="assets/images/work-2.png" alt="" />
+                  <div class="portfolio">
+                     <h3>Shoping App</h3>
+                     <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Deleniti ducimus saepe?
+                     </p>
+                     <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                  </div>
+               </div>
+               <div class="single-portfolio">
+                  <img src="assets/images/work-3.png" alt="" />
+                  <div class="portfolio">
+                     <h3>Online App</h3>
+                     <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Deleniti ducimus saepe?
+                     </p>
+                     <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                  </div>
+               </div>
+            </div>
+            <a href="" class="btn">Read More</a>
+         </div>
+      </div>
+
+      <!-----------Contact---------->
+      <div id="contact">
+         <div class="container">
+            <div class="contact-from">
+               <div class="contact-left-div">
+                  <h1 class="service-title">Contact Me</h1>
+                  <p><i class="fas fa-paper-plane"></i>support@gmail.com</p>
+                  <p><i class="fas fa-phone-square-alt"></i>support@gmail.com</p>
+                  <div class="social-icon">
+                     <a href=""><i class="fab fa-facebook"></i></a>
+                     <a href=""><i class="fab fa-twitter"></i></a>
+                     <a href=""><i class="fab fa-linkedin"></i></a>
+                     <a href=""><i class="fab fa-instagram"></i></a>
+                  </div>
+                  <a href="assets/images/my-cv.pdf" download class="btn btn2">Download CV</a>
+               </div>
+               <div class="contact-right-div">
+                  <input type="text" placeholder="Your Name" required />
+                  <input type="email" placeholder="Your Email" required />
+                  <textarea rows="4" placeholder="Your Message"></textarea>
+                  <button type="submit" class="btn btn2">Submit</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </main>
+
+   <!---------Footer---------->
+   <footer>
+      <div class="container">
+         <p>All Right Recive &copysr; By Developer Nazmul 2022</p>
+      </div>
+   </footer>
+   <!-- <script>
+      var tablinks=document.getElementsByClassName('tab-links');
+      var tabcontents=document.getElementsByClassName('tab-contents');
+      function opentab(tabname){
+         for(tablink of tablinks){
+            tablink.classList.remove('active-link');
+         }
+         for(tabcontent of tabcontents){
+            tabcontent.classList.remove('active-tab');
+         }
+         event.currentTarget.classList.add('active-link');
+         document.getElementById(tabname).classList.add('active-tab');
+      }
+   </script>
+
+   <script>
+      var sidemeu=document.getElementById('sidemenu')
+      function openmenu(){
+         sidemeu.style.right='0'
+      }
+      function closemenu(){
+         sidemeu.style.right='-200px'
+      }
+   </script> -->
+   <script src="assets/js/browser@4.js"></script>
+   <script src="assets/js/main.js"></script>
+</body>
+
+</html>

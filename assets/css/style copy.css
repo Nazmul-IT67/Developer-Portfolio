@@ -1,15 +1,17 @@
-*{
+* {
    margin: 0;
    border: 0;
-   font-family: 'Poppins',sans-serif;
+   font-family: "Poppins", sans-serif;
    box-sizing: border-box;
 }
-body{
+
+body {
    background-color: #080808;
    color: white;
 }
-#header{
-   background-image:url('images/background.png');
+
+#header {
+   background-image: url("../images/background.png");
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
@@ -17,30 +19,36 @@ body{
    height: 100vh;
    background-attachment: fixed;
 }
-.container{
+
+.container {
    padding: 10px 10%;
 }
-nav{
+
+nav {
    display: flex;
    justify-content: space-between;
    align-items: center;
 }
-.logo{
+
+.logo {
    width: 140px;
 }
-nav ul li{
+
+nav ul li {
    display: inline-block;
    list-style: none;
    margin: 10px 20px;
 }
-nav ul li a{
+
+nav ul li a {
    text-decoration: none;
    font-size: 18px;
    color: #fff;
    position: relative;
 }
-nav ul li a::after{
-   content: '';
+
+nav ul li a::after {
+   content: "";
    background-color: #ff004f;
    width: 0%;
    height: 3px;
@@ -49,60 +57,74 @@ nav ul li a::after{
    margin-top: 20px;
    transition: 0.5s;
 }
-nav ul li a:hover::after{
+
+nav ul li a:hover::after {
    width: 100%;
 }
-.header-title{
+
+.header-title {
    margin-top: 20%;
    font-size: 30px;
 }
-.header-title h1{
+
+.header-title h1 {
    margin-top: 20px;
    font-size: 60px;
 }
-.header-title h1 span{
+
+.header-title h1 span {
    color: #ff004f;
 }
-html{
+
+html {
    scroll-behavior: smooth;
 }
+
 /* --------about-------- */
-#about{
+#about {
    padding: 80px 0;
    color: #ababab;
 }
-.row{
+
+.row {
    display: flex;
    justify-content: space-between;
 }
-.about-col-1{
+
+.about-col-1 {
    flex-basis: 35%;
 }
-.about-col-1 img{
+
+.about-col-1 img {
    width: 100%;
    border-radius: 15px;
 }
-.about-col-2{
+
+.about-col-2 {
    flex-basis: 60%;
 }
-.about-col-2 h1{
+
+.about-col-2 h1 {
    font-size: 50px;
    color: #fff;
    font-weight: 600;
 }
-.tab-titles{
+
+.tab-titles {
    display: flex;
    margin: 20px 0px;
 }
-.tab-links{
+
+.tab-links {
    margin-right: 50px;
    font-size: 18px;
    font-weight: 500;
    cursor: pointer;
    position: relative;
 }
-.tab-links::after{
-   content: '';
+
+.tab-links::after {
+   content: "";
    background-color: #ff004f;
    width: 0%;
    height: 3px;
@@ -111,93 +133,111 @@ html{
    margin-top: 20px;
    transition: 0.5s;
 }
-.tab-links:hover::after{
+
+.tab-links:hover::after {
    width: 100%;
 }
-.active-link::after{
+
+.active-link::after {
    width: 50%;
 }
-.tab-contents ul li{
+
+.tab-contents ul li {
    list-style: none;
    margin: 2px 2px 10px -40px;
    font-size: 16px;
    line-height: 1.2rem;
 }
-.tab-contents ul li span{
+
+.tab-contents ul li span {
    color: #9b0a38ec;
 }
-.tab-contents{
+
+.tab-contents {
    display: none;
 }
-.tab-contents.active-tab{
+
+.tab-contents.active-tab {
    display: block;
 }
+
 /* ----------Services----------- */
-.service-title{
+.service-title {
    margin-bottom: 30px;
    font-size: 50px;
    color: #fff;
    font-weight: 600;
 }
-.service-item{
+
+.service-item {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-gap: 30px;
    margin-top: 30px;
 }
-.service-item div{
+
+.service-item div {
    background-color: #262626;
    padding: 30px;
    font-size: 13px;
    font-weight: 300;
    border-radius: 10px;
 }
-.service-item div:hover{
+
+.service-item div:hover {
    background-color: #ff004f;
    transform: translateY(-10px);
    transition: 0.5s;
 }
-.service-item div i{
+
+.service-item div i {
    font-size: 30px;
    margin-bottom: 20px;
 }
-.service-item div h2{
+
+.service-item div h2 {
    margin-bottom: 20px;
    font-size: 25px;
 }
-.service-item div a{
+
+.service-item div a {
    margin-top: 30px;
    text-decoration: none;
    color: white;
    display: inline-block;
 }
+
 /* -----------Portfolio---------- */
-#portfolio{
+#portfolio {
    margin: 50px 0;
 }
-.portfolio-item{
+
+.portfolio-item {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-gap: 40px;
    margin-top: 50px;
 }
-.single-portfolio{
+
+.single-portfolio {
    border-radius: 10px;
    position: relative;
    overflow: hidden;
 }
-.single-portfolio img{
+
+.single-portfolio img {
    border-radius: 10px;
    width: 100%;
    display: block;
    transition: 0.5s;
 }
-.portfolio{
+
+.portfolio {
    position: absolute;
    width: 100%;
    height: 0;
    left: 0;
-   bottom:0;
+   bottom: 0;
    background: linear-gradient(#18171799, #ff004f);
    border-radius: 10px;
    text-align: center;
@@ -209,11 +249,13 @@ html{
    font-size: 14px;
    transition: 0.5s;
 }
-.portfolio h3{
+
+.portfolio h3 {
    font-weight: 500;
    margin-bottom: 20px;
 }
-.portfolio a i{
+
+.portfolio a i {
    color: #ff004f;
    text-decoration: none;
    margin-top: 20px;
@@ -225,13 +267,16 @@ html{
    line-height: 50px;
    text-align: center;
 }
-.single-portfolio img:hover{
+
+.single-portfolio img:hover {
    transform: scale(1.1);
 }
-.single-portfolio:hover .portfolio{
+
+.single-portfolio:hover .portfolio {
    height: 100%;
 }
-.btn{
+
+.btn {
    display: block;
    margin: 50px auto;
    width: fit-content;
@@ -241,43 +286,54 @@ html{
    text-decoration: none;
    color: #fff;
 }
-.btn:hover{
+
+.btn:hover {
    background-color: #ff004f;
    transition: 0.5s;
 }
+
 /* -------contact-------- */
-.contact-from{
+.contact-from {
    display: flex;
 }
-.contact-left-div{
+
+.contact-left-div {
    flex-basis: 35%;
 }
-.contact-left-div p{
+
+.contact-left-div p {
    margin-top: 20px;
 }
-.contact-left-div i{
+
+.contact-left-div i {
    color: #ff004f;
    margin-right: 10px;
    font-size: 20px;
 }
-.social-icon{
+
+.social-icon {
    margin-top: 20px;
 }
-.social-icon a i{
+
+.social-icon a i {
    text-decoration: none;
    color: #ababab;
    font-size: 25px;
    display: inline-block;
    margin-right: 15px;
 }
-.btn2{
+
+.btn2 {
    background: #ff004f;
    display: inline-block;
 }
-.contact-right-div{
+
+.contact-right-div {
    flex-basis: 60%;
 }
-.contact-right-div input, textarea{
+
+.contact-right-div input,
+textarea {
    width: 100%;
    border: 0;
    outline: none;
@@ -288,8 +344,9 @@ html{
    font-size: 18px;
    color: #fff;
 }
+
 /* -------footer------- */
-footer{
+footer {
    background: #262626;
    padding: 20px 0;
    text-align: center;
@@ -297,26 +354,31 @@ footer{
    margin-top: 10px;
    width: 100%;
 }
+
 /* -------Responsive--------- */
 /* navber */
-#header i{
+#header i {
    display: none;
 }
 
-@media only screen and (max-width:680px) {
-   #header{
-      background-image: url(images/phone-background.png);
+@media only screen and (max-width: 680px) {
+   #header {
+      background-image: url(assets/images/phone-background.png);
    }
-   #header h1{
+
+   #header h1 {
       font-size: 30px;
    }
-   .header-title{
+
+   .header-title {
       margin-top: 150px;
    }
-   #header i{
+
+   #header i {
       display: block;
    }
-   nav ul{
+
+   nav ul {
       background: #ff004f;
       position: fixed;
       top: 0;
@@ -327,11 +389,13 @@ footer{
       z-index: 2;
       transition: 0.5s;
    }
-   nav ul li{
+
+   nav ul li {
       display: block;
       margin: 25px;
    }
-   nav ul i{
+
+   nav ul i {
       position: absolute;
       top: 25px;
       left: 65px;
@@ -339,43 +403,45 @@ footer{
    }
 }
 
-@media only screen and (max-width:680px) {
-   .service-item{
+@media only screen and (max-width: 680px) {
+   .service-item {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 30px;
       margin-top: 30px;
    }
 
-   .portfolio-item{
+   .portfolio-item {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 40px;
       margin-top: 50px;
    }
 
-   .contact-from{
+   .contact-from {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       text-align: center;
    }
 
-   .row{
+   .row {
       display: flex;
       flex-direction: column;
       text-align: justify;
    }
-   .about-col-1{
+
+   .about-col-1 {
       flex-basis: 100%;
       display: block;
       margin-bottom: 30px;
    }
-   .about-col-1 img{
+
+   .about-col-1 img {
       width: 100%;
       border-radius: 15px;
    }
-   .about-col-2 h1{
+
+   .about-col-2 h1 {
       margin-bottom: 30px;
    }
 }
-
