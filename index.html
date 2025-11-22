@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="assets/css/daisyui@5.css" />
   <script src="assets/js/browser@4.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/aos.css">
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
@@ -50,6 +51,7 @@
               <a href="#contact" class="bg-red-500 text-white px-6 py-2.5 rounded-lg hover:bg-red-600 transition ml-6">
                 Get Started
               </a>
+
             </ul>
 
             <!-- Mobile Menu Button -->
@@ -57,9 +59,25 @@
           </div>
         </div>
       </nav>
+      <!-- Mobile Menu -->
+      <div id="mobileMenu"
+        class="fixed inset-0 bg-black/95 backdrop-blur-lg hidden flex flex-col items-center justify-center gap-10 text-2xl font-medium z-40">
+        <button onclick="openmenu()" class="absolute top-8 right-8 text-white text-4xl hover:text-red-500 transition">
+          ×
+        </button>
+        <a href="#home" class="text-red-500 hover:text-red-400 transition">Home</a>
+        <a href="#about" class="text-white hover:text-red-400 transition">About</a>
+        <a href="#service" class="text-white hover:text-red-400 transition">Services</a>
+        <a href="#portfolio" class="text-white hover:text-red-400 transition">Portfolio</a>
+        <a href="#contact" class="text-white hover:text-red-400 transition">Contact</a>
+        <a href="#contact"
+          class="inline-block bg-red-600 hover:bg-red-700 px-10 py-4 rounded-xl text-lg font-medium transition">
+          Get Started
+        </a>
+      </div>
 
       <!-- Header Text -->
-      <div class="text-white animate-fadeIn border-l-4 border-red-500 pl-4 sm:pl-5 mt-8 sm:mt-12 md:mt-20">
+      <div class="text-white animate-fadeIn border-l-4 border-red-500 pl-4 sm:pl-5 mt-8 sm:mt-12 md:mt-20" id="home">
         <div class="text-lg sm:text-2xl font-semibold h-10 overflow-hidden mt-3 sm:mt-4">
           <span id="typewriter"></span>
         </div>
@@ -75,7 +93,7 @@
             class="bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-400 transition-all duration-500 text-center">
             Hire Me
           </a>
-          <a href="assets/cv.pdf" download
+          <a href="assets/images/NazmulCV.pdf" download
             class="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-black transition-all duration-500 text-center">
             Download CV
           </a>
@@ -89,15 +107,15 @@
   <!-- ========================================== -->
   <main class="container mx-auto px-6 md:px-10 lg:px-16 xl:px-20 py-20">
     <!-- ================= About Section ================ -->
-    <section class="flex flex-col md:flex-row gap-8 lg:gap-14 items-start">
+    <section class="flex flex-col md:flex-row gap-8 lg:gap-14 items-start" id="about">
       <!-- Left Image -->
-      <div class="w-full md:w-2/5 lg:w-1/3 flex">
+      <div class="w-full md:w-2/5 lg:w-1/3 flex" data-aos="fade-right" data-aos-delay="100">
         <img src="assets/images/user.jpg" alt="Nazmul Islam"
           class="w-full max-w-full rounded-2xl object-cover shadow-xl" />
       </div>
 
       <!-- Right Content -->
-      <div class="w-full md:w-3/5 lg:w-2/3 text-white">
+      <div class="w-full md:w-3/5 lg:w-2/3 text-white" data-aos="fade-up" data-aos-delay="100">
         <h1 class="text-4xl font-bold pb-2">About Me</h1>
 
         <p class="text-gray-300 leading-relaxed text-md pb-4">
@@ -223,247 +241,500 @@
     </section>
 
     <!-- ================= Searvice Section ================ -->
-    <section class="py-20">
-        <!-- Section Title -->
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-10">
-          My <span class="text-red-500">Services</span>
-        </h1>
+    <section class="py-20" id="service">
+      <!-- Section Title -->
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-10">
+        My <span class="text-red-500">Services</span>
+      </h1>
 
-        <!-- Services Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Service Item 1 -->
-          <div
-            class="group bg-[#262626] rounded-2xl p-8 hover:bg-[#ff004f] transition-all duration-300 transform hover:-translate-y-1 shadow-xl">
-            <div class="w-16 h-16 flex items-center mb-6">
-              <i class="fa-solid fa-code text-3xl text-red-500 group-hover:text-white transition-colors"></i>
-            </div>
-            <h2 class="text-2xl font-bold text-white mb-4">Web Design</h2>
-            <p class="text-white leading-relaxed mb-6">
-              Clean, responsive & pixel-perfect UI/UX designs using Figma, Tailwind CSS and React. Transforming ideas
-              into fast, interactive and conversion-driven modern web experiences.
-            </p>
-            <a href="#"
-              class="inline-flex items-center text-red-500 group-hover:text-white font-medium transition-colors">
-              Read More
-              <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
-            </a>
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service Item 1 -->
+        <div
+          class="group bg-[#262626] rounded-2xl p-8 hover:bg-[#ff004f] transition-all duration-300 transform hover:-translate-y-1 shadow-xl"
+          data-aos="fade-up" data-aos-delay="100">
+          <div class="w-16 h-16 flex items-center mb-6">
+            <i class="fa-solid fa-code text-3xl text-red-500 group-hover:text-white transition-colors"></i>
           </div>
+          <h2 class="text-2xl font-bold text-white mb-4">Web Design</h2>
+          <p class="text-white leading-relaxed mb-6">
+            Clean, responsive & pixel-perfect UI/UX designs using Figma, Tailwind CSS and React. Transforming ideas
+            into fast, interactive and conversion-driven modern web experiences.
+          </p>
+          <a href="#"
+            class="inline-flex items-center text-red-500 group-hover:text-white font-medium transition-colors">
+            Read More
+            <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+          </a>
+        </div>
 
-          <!-- Service Item 2 -->
-          <div
-            class="group bg-[#262626] rounded-2xl p-8 hover:bg-[#ff004f] transition-all duration-300 transform hover:-translate-y-1 shadow-xl">
-            <div class="w-16 h-16 flex items-center mb-6">
-              <i class="fa-solid fa-laptop-code text-3xl text-red-500 group-hover:text-white transition-colors"></i>
-            </div>
-            <h2 class="text-2xl font-bold text-white mb-4">
-              Full-Stack Web Development
-            </h2>
-            <p class="leading-relaxed mb-6">
-              Full-stack web applications built with Laravel, Livewire, React & MySQL – secure, lightning-fast, and
-              fully scalable solutions crafted for your business growth.
-            </p>
-            <a href="#"
-              class="inline-flex items-center text-red-500 group-hover:text-white font-medium hover:text-red-400 transition-colors">
-              Read More
-              <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
-            </a>
+        <!-- Service Item 2 -->
+        <div
+          class="group bg-[#262626] rounded-2xl p-8 hover:bg-[#ff004f] transition-all duration-300 transform hover:-translate-y-1 shadow-xl"
+          data-aos="fade-up" data-aos-delay="100">
+          <div class="w-16 h-16 flex items-center mb-6">
+            <i class="fa-solid fa-laptop-code text-3xl text-red-500 group-hover:text-white transition-colors"></i>
           </div>
+          <h2 class="text-2xl font-bold text-white mb-4">
+            Full-Stack Web Development
+          </h2>
+          <p class="leading-relaxed mb-6">
+            Full-stack web applications built with Laravel, Livewire, React & MySQL – secure, lightning-fast, and
+            fully scalable solutions crafted for your business growth.
+          </p>
+          <a href="#"
+            class="inline-flex items-center text-red-500 group-hover:text-white font-medium hover:text-red-400 transition-colors">
+            Read More
+            <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+          </a>
+        </div>
 
-          <!-- Service Item 3 -->
-          <div
-            class="group bg-[#262626] rounded-2xl p-8 hover:bg-[#ff004f] transition-all duration-300 transform hover:-translate-y-1 shadow-xl">
-            <div class="w-16 h-16 flex items-center mb-6">
-              <i class="fa-brands fa-wordpress text-3xl text-red-500 group-hover:text-white transition-colors"></i>
-            </div>
-            <h2 class="text-2xl font-bold text-white mb-4">
-              WordPress Development
-            </h2>
-            <p class="leading-relaxed mb-6">
-              Custom WordPress themes & plugins • WooCommerce stores • Elementor Pro • Speed optimization • Security
-              hardening • Ongoing maintenance.
-            </p>
-            <a href="#"
-              class="inline-flex items-center text-red-500 group-hover:text-white font-medium hover:text-red-400 transition-colors">
-              Read More
-              <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
-            </a>
+        <!-- Service Item 3 -->
+        <div
+          class="group bg-[#262626] rounded-2xl p-8 hover:bg-[#ff004f] transition-all duration-300 transform hover:-translate-y-1 shadow-xl"
+          data-aos="fade-up" data-aos-delay="100">
+          <div class="w-16 h-16 flex items-center mb-6">
+            <i class="fa-brands fa-wordpress text-3xl text-red-500 group-hover:text-white transition-colors"></i>
           </div>
+          <h2 class="text-2xl font-bold text-white mb-4">
+            WordPress Development
+          </h2>
+          <p class="leading-relaxed mb-6">
+            Custom WordPress themes & plugins • WooCommerce stores • Elementor Pro • Speed optimization • Security
+            hardening • Ongoing maintenance.
+          </p>
+          <a href="#"
+            class="inline-flex items-center text-red-500 group-hover:text-white font-medium hover:text-red-400 transition-colors">
+            Read More
+            <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+          </a>
+        </div>
 
-          <!-- Service Item 4 -->
-          <div
-            class="group bg-[#262626] rounded-2xl p-8 hover:bg-[#ff004f] transition-all duration-300 transform hover:-translate-y-1 shadow-xl">
-            <div class="w-16 h-16 flex items-center mb-6">
-              <i class="fa-solid fa-gears text-3xl text-red-500 group-hover:text-white transition-colors"></i>
-            </div>
-            <h2 class="text-2xl font-bold text-white mb-4">
-              API Integration
-            </h2>
-            <p class="leading-relaxed mb-6">
-              REST/GraphQL APIs, payment gateways, SMS, shipping & CRM integrations – everything connected smoothly.
-            </p>
-            <a href="#"
-              class="inline-flex items-center text-red-500 group-hover:text-white font-medium hover:text-red-400 transition-colors">
-              Read More
-              <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
-            </a>
+        <!-- Service Item 4 -->
+        <div
+          class="group bg-[#262626] rounded-2xl p-8 hover:bg-[#ff004f] transition-all duration-300 transform hover:-translate-y-1 shadow-xl"
+          data-aos="fade-up">
+          <div class="w-16 h-16 flex items-center mb-6">
+            <i class="fa-solid fa-gears text-3xl text-red-500 group-hover:text-white transition-colors"></i>
           </div>
+          <h2 class="text-2xl font-bold text-white mb-4">
+            API Integration
+          </h2>
+          <p class="leading-relaxed mb-6">
+            REST/GraphQL APIs, payment gateways, SMS, shipping & CRM integrations – everything connected smoothly.
+          </p>
+          <a href="#"
+            class="inline-flex items-center text-red-500 group-hover:text-white font-medium hover:text-red-400 transition-colors">
+            Read More
+            <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+          </a>
+        </div>
 
-          <!-- Service Item 5 -->
-          <div
-            class="group bg-[#262626] rounded-2xl p-8 hover:bg-[#ff004f] transition-all duration-300 transform hover:-translate-y-1 shadow-xl">
-            <div class="w-16 h-16 flex items-center mb-6">
-              <i class="fa-solid fa-microchip text-3xl text-red-500 group-hover:text-white transition-colors"></i>
-            </div>
-            <h2 class="text-2xl font-bold text-white mb-4">
-              AI-Powered Web Solutions
-            </h2>
-            <p class="leading-relaxed mb-6">
-              Chatbots, smart search, content generation, recommendation engines & automation using OpenAI, Gemini,
-              Claude & custom ML models.
-            </p>
-            <a href="#"
-              class="inline-flex items-center text-red-500 group-hover:text-white font-medium hover:text-red-400 transition-colors">
-              Read More
-              <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
-            </a>
+        <!-- Service Item 5 -->
+        <div
+          class="group bg-[#262626] rounded-2xl p-8 hover:bg-[#ff004f] transition-all duration-300 transform hover:-translate-y-1 shadow-xl"
+          data-aos="fade-up" data-aos-delay="100">
+          <div class="w-16 h-16 flex items-center mb-6">
+            <i class="fa-solid fa-microchip text-3xl text-red-500 group-hover:text-white transition-colors"></i>
           </div>
+          <h2 class="text-2xl font-bold text-white mb-4">
+            AI-Powered Web Solutions
+          </h2>
+          <p class="leading-relaxed mb-6">
+            Chatbots, smart search, content generation, recommendation engines & automation using OpenAI, Gemini,
+            Claude & custom ML models.
+          </p>
+          <a href="#"
+            class="inline-flex items-center text-red-500 group-hover:text-white font-medium hover:text-red-400 transition-colors">
+            Read More
+            <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+          </a>
+        </div>
 
-          <!-- Service Item 6 -->
-          <div
-            class="group bg-[#262626] rounded-2xl p-8 hover:bg-[#ff004f] transition-all duration-300 transform hover:-translate-y-1 shadow-xl">
-            <div class="w-16 h-16 flex items-center mb-6">
-              <i class="fa-solid fa-shield-halved text-3xl text-red-500 group-hover:text-white transition-colors"></i>
-            </div>
-            <h2 class="text-2xl font-bold text-white mb-4">
-              24/7 Support
-            </h2>
-            <p class="leading-relaxed mb-6">
-              Monthly updates, security monitoring, daily backups, bug fixes & priority support – your site always
-              online.
-            </p>
-            <a href="#"
-              class="inline-flex items-center text-red-500 group-hover:text-white font-medium hover:text-red-400 transition-colors">
-              Read More
-              <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
-            </a>
+        <!-- Service Item 6 -->
+        <div
+          class="group bg-[#262626] rounded-2xl p-8 hover:bg-[#ff004f] transition-all duration-300 transform hover:-translate-y-1 shadow-xl"
+          data-aos="fade-up" data-aos-delay="100">
+          <div class="w-16 h-16 flex items-center mb-6">
+            <i class="fa-solid fa-shield-halved text-3xl text-red-500 group-hover:text-white transition-colors"></i>
           </div>
+          <h2 class="text-2xl font-bold text-white mb-4">
+            24/7 Support
+          </h2>
+          <p class="leading-relaxed mb-6">
+            Monthly updates, security monitoring, daily backups, bug fixes & priority support – your site always
+            online.
+          </p>
+          <a href="#"
+            class="inline-flex items-center text-red-500 group-hover:text-white font-medium hover:text-red-400 transition-colors">
+            Read More
+            <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- ================= Portfolio Section ================ -->
-    <section class="py-20">
-        <!-- Section Title -->
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-10">
-          My <span class="text-red-500">Works</span>
-        </h1>
+    <section class="py-20" id="portfolio">
+      <!-- Section Title -->
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-10">
+        My <span class="text-red-500">Works</span>
+      </h1>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          <!-- Project 1 -->
-          <a href="https://xnews.wellxperts.com/" class="block group">
-            <div
-              class="bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-2xl transform hover:-translate-y-2 transition-all duration-500 border border-gray-800 hover:border-red-500/50">
-              <img src="assets/images/portfolio/1.jpg" alt="Project 1" class="w-full h-56 object-cover">
-              <div class="p-8">
-                <h3 class="text-2xl font-bold text-white mb-3">Newsportal Platform</h3>
-                <p class="text-gray-400 mb-4">Laravel • Bootstrap 5 • Dynamic Widgets • Multi-Language</p>
-                <span class="text-red-500 font-medium group-hover:text-white transition-colors">
-                  View Live Project →
-                </span>
-              </div>
+        <!-- Project 1 -->
+        <a href="https://xnews.wellxperts.com/" class="block group" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-2xl transform hover:-translate-y-2 transition-all duration-500 border border-gray-800 hover:border-red-500/50">
+            <img src="assets/images/portfolio/1.jpg" alt="Project 1" class="w-full h-56 object-cover">
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-white mb-3">Newsportal Platform</h3>
+              <p class="text-gray-400 mb-4">Laravel • Bootstrap 5 • Dynamic Widgets • Multi-Language</p>
+              <span class="text-red-500 font-medium group-hover:text-white transition-colors">
+                View Live Project →
+              </span>
             </div>
-          </a>
+          </div>
+        </a>
 
-          <!-- Project 2 -->
-          <a href="https://wellxperts.com/" class="block group">
-            <div
-              class="bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-2xl transform hover:-translate-y-2 transition-all duration-500 border border-gray-800 hover:border-red-500/50">
-              <img src="assets/images/portfolio/2.jpg" alt="Project 1" class="w-full h-56 object-cover">
-              <div class="p-8">
-                <h3 class="text-2xl font-bold text-white mb-3">Marketing Agency</h3>
-                <p class="text-gray-400 mb-4">Laravel • Bootstrap 5 • Multi-Language • Dynamic Content • SEO Optimized
-                </p>
-                <span class="text-red-500 font-medium group-hover:text-white transition-colors">
-                  View Live Project →
-                </span>
-              </div>
+        <!-- Project 2 -->
+        <a href="https://wellxperts.com/" class="block group" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-2xl transform hover:-translate-y-2 transition-all duration-500 border border-gray-800 hover:border-red-500/50">
+            <img src="assets/images/portfolio/2.jpg" alt="Project 1" class="w-full h-56 object-cover">
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-white mb-3">Marketing Agency</h3>
+              <p class="text-gray-400 mb-4">Laravel • Bootstrap 5 • Multi-Language • Dynamic Content • SEO Optimized
+              </p>
+              <span class="text-red-500 font-medium group-hover:text-white transition-colors">
+                View Live Project →
+              </span>
             </div>
-          </a>
+          </div>
+        </a>
 
-          <!-- Project 3 -->
-          <a href="https://mailbot.wellxperts.com/" class="block group">
-            <div
-              class="bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-2xl transform hover:-translate-y-2 transition-all duration-500 border border-gray-800 hover:border-red-500/50">
-              <img src="assets/images/portfolio/3.jpg" alt="Project 1" class="w-full h-56 object-cover">
-              <div class="p-8">
-                <h3 class="text-2xl font-bold text-white mb-3">Email Automation</h3>
-                <p class="text-gray-400 mb-4">Full-featured email automation platform with
-                  unlimited sending • analytics
-                </p>
-                <span class="text-red-500 font-medium group-hover:text-white transition-colors">
-                  View Live Project →
-                </span>
-              </div>
+        <!-- Project 3 -->
+        <a href="https://mailbot.wellxperts.com/" class="block group" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-2xl transform hover:-translate-y-2 transition-all duration-500 border border-gray-800 hover:border-red-500/50">
+            <img src="assets/images/portfolio/3.jpg" alt="Project 1" class="w-full h-56 object-cover">
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-white mb-3">Email Automation</h3>
+              <p class="text-gray-400 mb-4">Full-featured email automation platform with
+                unlimited sending • analytics
+              </p>
+              <span class="text-red-500 font-medium group-hover:text-white transition-colors">
+                View Live Project →
+              </span>
             </div>
-          </a>
+          </div>
+        </a>
 
-          <!-- Project 4 -->
-          <a href="https://smmsujon.com/" class="block group">
-            <div
-              class="bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-2xl transform hover:-translate-y-2 transition-all duration-500 border border-gray-800 hover:border-red-500/50">
-              <img src="assets/images/portfolio/4.jpg" alt="Project 1" class="w-full h-56 object-cover">
-              <div class="p-8">
-                <h3 class="text-2xl font-bold text-white mb-3">Business Website</h3>
-                <p class="text-gray-400 mb-4">WordPress • Astra Pro – Fast loading • Fully responsive</p>
-                <span class="text-red-500 font-medium group-hover:text-white transition-colors">
-                  View Live Project →
-                </span>
-              </div>
+        <!-- Project 4 -->
+        <a href="https://smmsujon.com/" class="block group" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-2xl transform hover:-translate-y-2 transition-all duration-500 border border-gray-800 hover:border-red-500/50">
+            <img src="assets/images/portfolio/4.jpg" alt="Project 1" class="w-full h-56 object-cover">
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-white mb-3">Business Website</h3>
+              <p class="text-gray-400 mb-4">WordPress • Astra Pro – Fast loading • Fully responsive</p>
+              <span class="text-red-500 font-medium group-hover:text-white transition-colors">
+                View Live Project →
+              </span>
             </div>
-          </a>
+          </div>
+        </a>
 
-          <!-- Project 5 -->
-          <a href="https://pricete.com/" class="block group">
-            <div
-              class="bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-2xl transform hover:-translate-y-2 transition-all duration-500 border border-gray-800 hover:border-red-500/50">
-              <img src="assets/images/portfolio/5.jpg" alt="Project 1" class="w-full h-56 object-cover">
-              <div class="p-8">
-                <h3 class="text-2xl font-bold text-white mb-3">Mobile Shop</h3>
-                <p class="text-gray-400 mb-4">WordPress • Astra • Dark-mode • Mobile Responsive</p>
-                <span class="text-red-500 font-medium group-hover:text-white transition-colors">
-                  View Live Project →
-                </span>
-              </div>
+        <!-- Project 5 -->
+        <a href="https://pricete.com/" class="block group" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-2xl transform hover:-translate-y-2 transition-all duration-500 border border-gray-800 hover:border-red-500/50">
+            <img src="assets/images/portfolio/5.jpg" alt="Project 1" class="w-full h-56 object-cover">
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-white mb-3">Mobile Shop</h3>
+              <p class="text-gray-400 mb-4">WordPress • Astra • Dark-mode • Mobile Responsive</p>
+              <span class="text-red-500 font-medium group-hover:text-white transition-colors">
+                View Live Project →
+              </span>
             </div>
-          </a>
+          </div>
+        </a>
 
-          <!-- Project 6 -->
-          <a href="https://bijoya.net/" class="block group">
-            <div
-              class="bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-2xl transform hover:-translate-y-2 transition-all duration-500 border border-gray-800 hover:border-red-500/50">
-              <img src="assets/images/portfolio/6.jpg" alt="Project 1" class="w-full h-56 object-cover">
-              <div class="p-8">
-                <h3 class="text-2xl font-bold text-white mb-3">Blog Platform</h3>
-                <p class="text-gray-400 mb-4">Secure & scalable Laravel App with admin panel • Auth • Real-time features</p>
-                <span class="text-red-500 font-medium group-hover:text-white transition-colors">
-                  View Live Project →
-                </span>
-              </div>
+        <!-- Project 6 -->
+        <a href="https://bijoya.net/" class="block group" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-2xl transform hover:-translate-y-2 transition-all duration-500 border border-gray-800 hover:border-red-500/50">
+            <img src="assets/images/portfolio/6.jpg" alt="Project 1" class="w-full h-56 object-cover">
+            <div class="p-8">
+              <h3 class="text-2xl font-bold text-white mb-3">Blog Platform</h3>
+              <p class="text-gray-400 mb-4">Secure & scalable Laravel App with admin panel • Auth • Real-time features
+              </p>
+              <span class="text-red-500 font-medium group-hover:text-white transition-colors">
+                View Live Project →
+              </span>
             </div>
-          </a>
-        </div>
+          </div>
+        </a>
+      </div>
     </section>
+
+    <!-- ================= FAQ Section ================= -->
+    <section class="py-24" id="faq">
+      <!-- Title -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+          Frequently Asked <span class="text-red-500">Questions</span>
+        </h2>
+        <div class="w-24 h-1 bg-red-500 rounded-full mx-auto"></div>
+      </div>
+
+      <!-- All Cards – Alpine.js-->
+      <div class="space-y-6" x-data="{ active: null }">
+
+        <!-- Card 1 -->
+        <details class="group" :open="active === 1" @click.prevent="active = (active === 1 ? null : 1)"
+          data-aos="fade-up" data-aos-delay="100">
+          <summary class="block p-5 bg-[#1a1a1a] rounded-2xl border border-gray-800 cursor-pointer list-none shadow-xl 
+                        hover:shadow-2xl hover:shadow-red-500/10 hover:border-red-500/60 transition-all duration-500">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-bold text-white">What services do you offer?</h3>
+              <svg class="w-7 h-7 text-red-500 transition-transform duration-500 group-open:rotate-180" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </summary>
+          <div class="px-7 pb-5 -mt-3 bg-[#1a1a1a] rounded-b-2xl border-t border-gray-800">
+            <div class="pt-4 text-gray-300 leading-relaxed">
+              <p>I provide full-stack web solutions:</p>
+              <ul class="mt-4 space-y-2 text-gray-400 text-sm font-medium">
+                <li>• Custom Websites (Laravel / WordPress)</li>
+                <li>• E-commerce & WooCommerce Stores</li>
+                <li>• SaaS Applications & Dashboards</li>
+                <li>• Multi-Language & RTL Support</li>
+                <li>• Speed Optimization + SEO</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <!-- Card 2 -->
+        <details class="group" :open="active === 3" @click.prevent="active = (active === 3 ? null : 3)"
+          data-aos="fade-up" data-aos-delay="100">
+          <summary class="block p-5 bg-[#1a1a1a] rounded-2xl border border-gray-800 cursor-pointer list-none shadow-xl 
+                        hover:shadow-2xl hover:shadow-red-500/10 hover:border-red-500/60 transition-all duration-500">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-bold text-white">What payment methods do you accept?</h3>
+              <svg class="w-7 h-7 text-red-500 transition-transform duration-500 group-open:rotate-180" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </summary>
+          <div class="px-7 pb-5 -mt-3 bg-[#1a1a1a] rounded-b-2xl border-t border-gray-800">
+            <p class="pt-4 text-gray-300">I accept:</p>
+            <ul class="mt-3 space-y-1 text-gray-400 text-sm">
+              <li>• bKash, Nagad, Rocket</li>
+              <li>• Bank Transfer (Local/International)</li>
+              <li>• PayPal, Wise, Payoneer</li>
+              <li>• USDT & Crypto</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Card 3 -->
+        <details class="group" :open="active === 4" @click.prevent="active = (active === 4 ? null : 4)"
+          data-aos="fade-up" data-aos-delay="100">
+          <summary class="block p-5 bg-[#1a1a1a] rounded-2xl border border-gray-800 cursor-pointer list-none shadow-xl 
+                  hover:shadow-2xl hover:shadow-red-500/10 hover:border-red-500/60 transition-all duration-500">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-bold text-white">How long does a project take?</h3>
+              <svg class="w-7 h-7 text-red-500 transition-transform duration-500 group-open:rotate-180" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </summary>
+          <div class="px-7 pb-5 -mt-3 bg-[#1a1a1a] rounded-b-2xl border-t border-gray-800">
+            <p class="pt-4 text-gray-300 leading-relaxed">Timeline depends on project type:</p>
+            <ul class="mt-3 space-y-2 text-gray-400 text-sm">
+              <li>Simple Website → 5–10 days</li>
+              <li>E-commerce / Blog → 10–20 days</li>
+              <li>Custom SaaS / Dashboard → 20–45 days</li>
+              <li>Complex Systems → 45–90 days</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Card 4 -->
+        <details class="group" :open="active === 5" @click.prevent="active = (active === 5 ? null : 5)"
+          data-aos="fade-up" data-aos-delay="100">
+          <summary class="block p-5 bg-[#1a1a1a] rounded-2xl border border-gray-800 cursor-pointer list-none shadow-xl 
+                  hover:shadow-2xl hover:shadow-red-500/10 hover:border-red-500/60 transition-all duration-500">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-bold text-white">Do you provide support after delivery?</h3>
+              <svg class="w-7 h-7 text-red-500 transition-transform duration-500 group-open:rotate-180" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </summary>
+          <div class="px-7 pb-5 -mt-3 bg-[#1a1a1a] rounded-b-2xl border-t border-gray-800">
+            <p class="pt-4 text-gray-300">
+              Yes! <strong>30 days free support</strong> included with every project.<br>
+              After that, affordable monthly maintenance packages available (bug fix + updates).
+            </p>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ================= Contact Section ================= -->
+    <section class="py-24" id="contact">
+      <!-- <div class="max-w-7xl mx-auto px-6"> -->
+
+      <!-- Section Title -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+          Let's Work <span class="text-red-500">Together</span>
+        </h2>
+        <p class="text-gray-400 text-lg">Would you like to discuss anything? Feel free to message me!</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 px-5">
+
+        <!-- Left Side -->
+        <div class="md:col-span-5 space-y-10 sm:my-5" data-aos="fade-right" data-aos-delay="100">
+          <!-- Title -->
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">
+              Get in <span class="text-red-500">Touch</span>
+            </h2>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="space-y-7 text-gray-300">
+            <div class="flex items-center gap-5">
+              <div class="w-12 h-12 bg-red-500/20 rounded-md flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-envelope text-red-500 text-2xl"></i>
+              </div>
+              <div>
+                <p class="text-md text-gray-400">Email</p>
+                <p class="font-semibold text-md">nazmul.cse67@gnail.com</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-5">
+              <div class="w-12 h-12 bg-red-500/20 rounded-md flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-phone text-red-500 text-2xl"></i>
+              </div>
+              <div>
+                <p class="text-md text-gray-400">Phone / WhatsApp</p>
+                <p class="font-semibold text-md">+880 163 809 6733</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="mt-10">
+            <div class="flex gap-4">
+              <a href="#"
+                class="w-12 h-12 bg-[#1a1a1a] rounded-md flex items-center justify-center border border-gray-800 
+                            hover:bg-red-500/20 hover:border-red-500/60 hover:text-red-500 transition-all duration-300">
+                <i class="fa-brands fa-square-facebook text-xl text-gray-300"></i>
+              </a>
+
+              <a href="#"
+                class="w-12 h-12 bg-[#1a1a1a] rounded-md flex items-center justify-center border border-gray-800 
+                            hover:bg-red-500/20 hover:border-red-500/60 hover:text-red-500 transition-all duration-300">
+                <i class="fa-brands fa-linkedin text-xl text-gray-300"></i>
+              </a>
+
+              <a href="#"
+                class="w-12 h-12 bg-[#1a1a1a] rounded-md flex items-center justify-center border border-gray-800 
+                            hover:bg-red-500/20 hover:border-red-500/60 hover:text-red-500 transition-all duration-300">
+                <i class="fa-brands fa-square-github text-xl text-gray-300"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Download CV Button -->
+          <a href="assets/images/NazmulCV.pdf" download
+            class="inline-flex items-center gap-3 px-4 py-4 bg-red-500 hover:bg-red-700 text-white font-bold text-md rounded-md transition-all duration-300"></i>
+            Download CV
+          </a>
+
+        </div>
+
+        <!-- Right Side -->
+        <div class="md:col-span-7" data-aos="fade-left" data-aos-delay="100">
+          <div class="bg-[#1f1e1e] rounded-xl border border-gray-800 p-4 md:p-8 shadow-2xl">
+            <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+
+              <input type="text" name="name" placeholder="Enter Your Name" required
+                class="w-full px-4 py-3 bg-black/40 border border-gray-700 rounded-md text-white placeholder-gray-500 
+                          focus:outline-none focus:border-red-500 focus:ring-4 focus:ring-red-500/20 transition-all duration-300 text-lg">
+
+              <input type="email" name="email" placeholder="Enter Your Email" required
+                class="w-full px-4 py-3 bg-black/40 border border-gray-700 rounded-md text-white placeholder-gray-500 
+                          focus:outline-none focus:border-red-500 focus:ring-4 focus:ring-red-500/20 transition-all duration-300 text-lg">
+
+              <textarea name="message" rows="4" placeholder="Enter Your Message..." required
+                class="w-full px-4 py-3 bg-black/40 border border-gray-700 rounded-md text-white placeholder-gray-500 
+                             focus:outline-none focus:border-red-500 focus:ring-4 focus:ring-red-500/20 transition-all duration-300 resize-none text-lg"></textarea>
+
+              <button type="submit" class="w-full py-4 bg-red-500 hover:bg-red-700 text-white font-bold text-md rounded-md 
+                           transition-all duration-300">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- ========================================== -->
   <!--             FOOTER SECTION                 -->
   <!-- ========================================== -->
+  <footer class="bg-black border-t border-gray-800">
 
-  <footer>
-    <div class="container">
-      <p>All Right Recive &copysr; By Developer Nazmul 2022</p>
+    <div class="max-w-4xl mx-auto text-center">
+
+      <div class="space-y-2 py-5">
+        <h3 class="text-3xl font-bold text-white">
+          Nazmul <span class="text-red-500">Islam</span>
+        </h3>
+
+        <p class="text-gray-400 text-base">
+          Full-Stack Web Developer • Laravel & WordPress Specialist
+        </p>
+
+        <p class="text-gray-500 text-sm">
+          Made with <span class="text-red-500 text-lg">♥</span> from Bangladesh
+        </p>
+
+      </div>
     </div>
+    <p class="text-gray-400 text-xs text-center border-t border-gray-800 py-5">
+      © 2025 All Rights Reserved By Nazmul Islam
+    </p>
+    <!-- Back to Top Button -->
+    <button id="backToTop"
+      class="fixed bottom-2 right-2 z-50 w-8 h-8 bg-red-500 hover:bg-red-700 text-white rounded-sm shadow-2xl hover:shadow-red-500/40 flex items-center justify-center transition-all duration-500 opacity-0 invisible">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+      </svg>
+    </button>
   </footer>
+  <!-- Alpine.js CDN -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="assets/js/aos.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 

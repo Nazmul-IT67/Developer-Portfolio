@@ -1,3 +1,15 @@
+// Menu 
+function openmenu() {
+  document.getElementById('mobileMenu').classList.toggle('hidden');
+}
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.add('hidden');
+  });
+});
+
+// Header 
 const texts = [
   "Full-Stack Developer",
   "AI Web Developer",
@@ -43,8 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
   setTimeout(type, delayBetween);
 });
 
-
-
 var tablinks = document.getElementsByClassName('tab-link');
 var tabcontents = document.getElementsByClassName('tab-contents');
 function opentab(tabname) {
@@ -57,3 +67,47 @@ function opentab(tabname) {
   event.currentTarget.classList.add('active-link');
   document.getElementById(tabname).classList.add('active-tab');
 }
+
+// Animation 
+AOS.init({
+  duration: 800,
+  easing: 'ease',
+  once: true,
+});
+
+
+// Smooth Scroll for all internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+
+      history.pushState(null, null, this.getAttribute('href'));
+    }
+  });
+});
+
+// Back to Top Button Script
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    backToTop.classList.remove('opacity-0', 'invisible');
+    backToTop.classList.add('opacity-100', 'visible');
+  } else {
+    backToTop.classList.remove('opacity-100', 'visible');
+    backToTop.classList.add('opacity-0', 'invisible');
+  }
+});
+
+backToTop.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
